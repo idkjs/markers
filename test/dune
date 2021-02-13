@@ -1,0 +1,11 @@
+(executable
+ (modes byte exe)
+ (name test)
+ (libraries markers))
+
+(rule
+ (alias runtest)
+ (deps
+  (:< test.exe))
+ (action
+  (run %{<})))
